@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leaderboard — CTF Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="leaderboard.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚡ CALICORE ⚡</h1>
+      <p class="subtitle">Leaderboard</p>
+    </header>
+
+    <div class="lb-topbar">
+      <a href="index.html" class="btn-secondary">← Back to Lab</a>
+      <button id="refresh-btn" class="btn-primary small">↻ Refresh</button>
+    </div>
+
+    <!-- TOP 3 PODIUM -->
+    <section class="podium-wrap">
+      <h2>🏆 Current Leaders</h2>
+      <div id="podium" class="podium"></div>
+    </section>
+
+    <!-- RANK GRAPH -->
+    <section class="graph-wrap">
+      <h2>📊 Ranking Graph</h2>
+      <p class="graph-hint">
+        Bars show flags captured (max 6). Sorted by rank:
+        more flags first, ties broken by who reached their latest flag earliest.
+      </p>
+      <div id="rank-graph" class="rank-graph"></div>
+    </section>
+
+    <!-- PER-FLAG TIMELINE -->
+    <section class="timeline-wrap">
+      <h2>⏱️ Flag Submission Timeline</h2>
+      <div id="timeline" class="timeline"></div>
+    </section>
+  </div>
+
+  <script src="leaderboard.js"></script>
+</body>
+</html>

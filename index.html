@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CALICORE — Flag Submission</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚡ CALICORE-26 ⚡</h1>
+      <p class="subtitle">Flag Submission Portal</p>
+    </header>
+
+    <!-- LOGIN SCREEN -->
+    <section id="login-screen" class="panel">
+      <h2>Login / Register</h2>
+
+      <div class="tabs">
+        <button id="tab-individual" class="tab active">Individual</button>
+        <button id="tab-team" class="tab">Team</button>
+      </div>
+
+            <div id="individual-form" class="form">
+        <label>Player Name</label>
+        <input type="text" id="individual-name" placeholder="Enter player name" />
+        <label>Password</label>
+        <input type="password" id="individual-password" placeholder="Set or enter your password" />
+      </div>
+
+            <div id="team-form" class="form hidden">
+        <label>Team Name</label>
+        <input type="text" id="team-name" placeholder="Enter team name" />
+
+        <label>Team Password</label>
+        <input type="password" id="team-password" placeholder="Set or enter team password" />
+
+        <label>Number of Members (2–4)</label>
+        <select id="team-count">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+
+        <div id="member-inputs"></div>
+      </div>
+
+      <button id="login-btn" class="btn-primary">Enter Lab</button>
+      <p id="login-msg" class="msg"></p>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="hidden">
+            <div class="player-bar">
+        <div>
+          <span id="player-label"></span>
+          <span id="player-members" class="members"></span>
+        </div>
+        <div class="player-actions">
+          <a href="leaderboard.html" class="btn-secondary">🏁 View Leaderboard</a>
+          <button id="logout-btn" class="btn-secondary">Logout</button>
+        </div>
+      </div>
+
+      <h2>Submit Flags</h2>
+      <div id="flag-grid" class="flag-grid"></div>
+
+      
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
